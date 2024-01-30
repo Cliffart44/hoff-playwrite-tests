@@ -9,21 +9,55 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        distribution: zulu
+        java-version: 21
+
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.12'
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+
     - name: Ensure browsers are installed
       run: python -m playwright install --with-deps
+
     - name: Run your tests
-      run: pytest --browser firefox --tracing on
-    - uses: actions/upload-artifact@v3
+      run: pytest --browser firefox --tracing retain-on-failure --alluredir allure-results --clean-alluredir
+    - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: playwright-traces
         path: test-results/
+
+    - name: Load test report history
+      uses: actions/checkout@v4
+      if: always()
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages
+
+    - name: Build test report
+      uses: simple-elf/allure-report-action@v1
+      if: always()
+      with:
+        gh_pages: gh-pages
+        allure_history: allure-history
+        allure_results: allure-results
+
+    - name: Publish test report
+      uses: peaceiris/actions-gh-pages@v3
+      if: always()
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: allure-history

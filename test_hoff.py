@@ -1,5 +1,6 @@
 import re
 
+import allure
 from playwright.sync_api import Page, expect
 
 
@@ -60,7 +61,13 @@ def test_basket_emptify(page: Page):
         page.get_by_role("link", name=re.compile(" кухонный гарнитур ")).first.click()
     kitchen_set_tab = second_tab.value
     kitchen_set_tab.get_by_text("Отзывы").click()
-    kitchen_set_tab.screenshot()
+    kitchen_set_tab.get_by_text("Отзывы").scroll_into_view_if_needed()
+    png_bytes = kitchen_set_tab.screenshot()
+    allure.attach(
+        png_bytes,
+        name="full-page1",
+        attachment_type=allure.attachment_type.PNG,
+    )
     kitchen_set_tab.locator("#buyButton").get_by_role(
         "button",
         name="Добавить в корзину",
