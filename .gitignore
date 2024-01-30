@@ -1,5 +1,7 @@
 .idea/
 __pycache__/
+allure-report/
+allure-results/
 node_modules/
 test-results/
 pyproject.toml
