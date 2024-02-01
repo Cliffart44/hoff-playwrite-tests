@@ -74,49 +74,76 @@ def test_computer_tables(page: Page):
         )
 
 
+@allure.title("Basket Emptify")
+@allure.description(
+    "This test attempts to add couple items to the basket and then emptify it."
+)
+@allure.tag(
+    "Essentials",
+)
+@allure.severity(allure.severity_level.MINOR)
+@allure.link(
+    "https://disk.yandex.ru/edit/d/t5Wq-4elrJGyNFQzXPsDTCPegnqahzm72s0qoIz-cKg6YjNoOURsNEZ1dw",
+    name="Source",
+)
+@allure.testcase("Test")
 def test_basket_emptify(page: Page):
-    page.goto("https://hoff.ru/")
-    expect(page).to_have_title(re.compile("Hoff"))
-    page.fill('.c-input__field[type="search"]', "Модульные кухонные гарнитуры")
-    page.get_by_role("button", name="Смотреть все результаты").click()
-    page.get_by_role("spinbutton", name="от").fill("50001")
-    page.get_by_role("spinbutton", name="до").focus()
-    page.wait_for_load_state("domcontentloaded")
-    page.get_by_role("spinbutton", name="до").fill("99999")
-    page.get_by_role("spinbutton", name="от").focus()
-    page.wait_for_load_state("domcontentloaded")
+    with allure.step("Open the main page and search for a kitchen sets"):
+        page.goto("https://hoff.ru/")
+        expect(page).to_have_title(re.compile("Hoff"))
+        page.fill('.c-input__field[type="search"]', "Модульные кухонные гарнитуры")
+        page.get_by_role("button", name="Смотреть все результаты").click()
+        page.get_by_role("spinbutton", name="от").fill("50001")
+        page.get_by_role("spinbutton", name="до").focus()
+        page.wait_for_load_state("domcontentloaded")
+        page.get_by_role("spinbutton", name="до").fill("99999")
+        page.get_by_role("spinbutton", name="от").focus()
+        page.wait_for_load_state("domcontentloaded")
 
-    with page.context.expect_page() as second_tab:
-        page.get_by_role("link", name=re.compile(" кухонный гарнитур ")).first.click()
-    kitchen_set_tab = second_tab.value
-    kitchen_set_tab.get_by_text("Отзывы").click()
-    kitchen_set_tab.get_by_text("Отзывы").scroll_into_view_if_needed()
-    png_bytes = kitchen_set_tab.screenshot()
-    allure.attach(
-        png_bytes,
-        name="full-page1",
-        attachment_type=allure.attachment_type.PNG,
-    )
-    kitchen_set_tab.locator("#buyButton").get_by_role(
-        "button",
-        name="Добавить в корзину",
-        exact=True,
-    ).click()
-    kitchen_set_tab.get_by_role("button", name="Продолжить покупки").click()
-
-    with page.context.expect_page() as third_tab:
-        kitchen_set_tab.get_by_role("link", name="Столешница", exact=True).click()
-    tabletop_tab = third_tab.value
-    expect(tabletop_tab.locator(".product-button-big").nth(2)).to_be_enabled()
-    tabletop_tab.locator(".product-button-big").nth(2).click()
-    tabletop_tab.get_by_role("button", name="Оформить заказ").click()
-    expect(tabletop_tab.locator(".basket-item__button.delete").last).to_be_visible()
-    while tabletop_tab.query_selector(".basket-item__button.delete"):
-        tabletop_tab.locator(".basket-item__button.delete").first.click(delay=1000)
-    expect(
-        tabletop_tab.get_by_role(
-            "heading",
-            name="0 товаров в корзине",
-            exact=True,
+    with allure.step("Check kitchen set reviews tab and add the set to the basket"):
+        with page.context.expect_page() as second_tab:
+            page.get_by_role(
+                "link",
+                name=re.compile(
+                    " кухонный гарнитур ",
+                ),
+            ).first.click()
+        kitchen_set_tab = second_tab.value
+        kitchen_set_tab.get_by_text("Отзывы").click()
+        kitchen_set_tab.get_by_text("Отзывы").scroll_into_view_if_needed()
+        png_bytes = kitchen_set_tab.screenshot()
+        allure.attach(
+            png_bytes,
+            name="full-page1",
+            attachment_type=allure.attachment_type.PNG,
         )
-    )
+        kitchen_set_tab.locator("#buyButton").get_by_role(
+            "button",
+            name="Добавить в корзину",
+            exact=True,
+        ).click()
+        kitchen_set_tab.get_by_role("button", name="Продолжить покупки").click()
+
+    with allure.step("Open tabletop tab and add third item to the basket"):
+        with page.context.expect_page() as third_tab:
+            kitchen_set_tab.get_by_role(
+                "link",
+                name="Столешница",
+                exact=True,
+            ).click()
+        tabletop_tab = third_tab.value
+        expect(tabletop_tab.locator(".product-button-big").nth(2)).to_be_enabled()
+        tabletop_tab.locator(".product-button-big").nth(2).click()
+
+    with allure.step("Open the basket and delete all items"):
+        tabletop_tab.get_by_role("button", name="Оформить заказ").click()
+        expect(tabletop_tab.locator(".basket-item__button.delete").last).to_be_visible()
+        while tabletop_tab.query_selector(".basket-item__button.delete"):
+            tabletop_tab.locator(".basket-item__button.delete").first.click(delay=1000)
+        expect(
+            tabletop_tab.get_by_role(
+                "heading",
+                name="0 товаров в корзине",
+                exact=True,
+            )
+        )
