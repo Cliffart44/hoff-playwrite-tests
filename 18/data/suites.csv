@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Feb 01 06:02:26 GMT 2024","Thu Feb 01 06:03:02 GMT 2024","36001","","test_hoff","","","","test_basket_emptify[firefox]",""
+"passed","Thu Feb 01 06:02:11 GMT 2024","Thu Feb 01 06:02:25 GMT 2024","14156","","test_hoff","","","","test_computer_tables[firefox]",""

@@ -1,0 +1,31 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "test_computer_tables[firefox]",
+    "uid" : "74b5f988c01d82d7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1706767331653,
+      "stop" : 1706767345809,
+      "duration" : 14156
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "test_basket_emptify[firefox]",
+    "uid" : "6731442ca46feae0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1706767346123,
+      "stop" : 1706767382124,
+      "duration" : 36001
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "'firefox'" ]
+  } ],
+  "name" : "behaviors"
+}

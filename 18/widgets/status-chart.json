@@ -1,0 +1,21 @@
+[ {
+  "uid" : "6731442ca46feae0",
+  "name" : "test_basket_emptify[firefox]",
+  "time" : {
+    "start" : 1706767346123,
+    "stop" : 1706767382124,
+    "duration" : 36001
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "74b5f988c01d82d7",
+  "name" : "test_computer_tables[firefox]",
+  "time" : {
+    "start" : 1706767331653,
+    "stop" : 1706767345809,
+    "duration" : 14156
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
