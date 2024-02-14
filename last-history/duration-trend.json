@@ -1,4 +1,11 @@
 [ {
+  "buildOrder" : 21,
+  "reportUrl" : "https://Cliffart44.github.io/hoff-playwrite-tests/21",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "duration" : 148346
+  }
+}, {
   "buildOrder" : 25,
   "reportUrl" : "https://Cliffart44.github.io/hoff-playwrite-tests/25",
   "reportName" : "Allure Report with history",

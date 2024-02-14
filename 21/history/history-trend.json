@@ -1,0 +1,46 @@
+[ {
+  "buildOrder" : 21,
+  "reportUrl" : "https://Cliffart44.github.io/hoff-playwrite-tests/21",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 2,
+    "unknown" : 0,
+    "total" : 2
+  }
+}, {
+  "buildOrder" : 25,
+  "reportUrl" : "https://Cliffart44.github.io/hoff-playwrite-tests/25",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 2,
+    "unknown" : 0,
+    "total" : 2
+  }
+}, {
+  "buildOrder" : 24,
+  "reportUrl" : "https://Cliffart44.github.io/hoff-playwrite-tests/24",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 1,
+    "skipped" : 0,
+    "passed" : 1,
+    "unknown" : 0,
+    "total" : 2
+  }
+}, {
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 0
+  }
+} ]

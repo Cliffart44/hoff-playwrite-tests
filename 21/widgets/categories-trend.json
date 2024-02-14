@@ -1,0 +1,20 @@
+[ {
+  "buildOrder" : 21,
+  "reportUrl" : "https://Cliffart44.github.io/hoff-playwrite-tests/21",
+  "reportName" : "Allure Report with history",
+  "data" : { }
+}, {
+  "buildOrder" : 25,
+  "reportUrl" : "https://Cliffart44.github.io/hoff-playwrite-tests/25",
+  "reportName" : "Allure Report with history",
+  "data" : { }
+}, {
+  "buildOrder" : 24,
+  "reportUrl" : "https://Cliffart44.github.io/hoff-playwrite-tests/24",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "Test defects" : 1
+  }
+}, {
+  "data" : { }
+} ]

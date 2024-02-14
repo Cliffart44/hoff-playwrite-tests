@@ -1,0 +1,52 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az1153-308",
+    "children" : [ {
+      "name" : "fv-az1153-308-4802-playwright-worker-0",
+      "children" : [ {
+        "name" : "Basket Emptify",
+        "uid" : "d3796f2f3241718e",
+        "parentUid" : "76e1b1e8304e60d1a2d553f5acbd5270",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707933014055,
+          "stop" : 1707933057392,
+          "duration" : 43337
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "firefox" ]
+      }, {
+        "name" : "Basket Emptify",
+        "uid" : "22213f6f71ab2556",
+        "parentUid" : "76e1b1e8304e60d1a2d553f5acbd5270",
+        "status" : "broken",
+        "time" : {
+          "start" : 1707932923153,
+          "stop" : 1707933013743,
+          "duration" : 90590
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "firefox" ]
+      }, {
+        "name" : "Computer Tables",
+        "uid" : "3a9c70908850219d",
+        "parentUid" : "76e1b1e8304e60d1a2d553f5acbd5270",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707932909046,
+          "stop" : 1707932923151,
+          "duration" : 14105
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "firefox" ]
+      } ],
+      "uid" : "76e1b1e8304e60d1a2d553f5acbd5270"
+    } ],
+    "uid" : "9e7ee809b50365e29a6d1c8e5799978c"
+  } ],
+  "name" : "timeline"
+}
