@@ -1,0 +1,24 @@
+{
+  "name": "Hoff",
+  "version": "1.0.0",
+  "description": "[Source](https://disk.yandex.ru/edit/d/t5Wq-4elrJGyNFQzXPsDTCPegnqahzm72s0qoIz-cKg6YjNoOURsNEZ1dw)",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cliffart44/hoff-playwrite-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cliffart44/hoff-playwrite-tests/issues"
+  },
+  "homepage": "https://github.com/Cliffart44/hoff-playwrite-tests#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.17",
+    "allure-commandline": "^2.27.0",
+    "allure-playwright": "^2.12.0"
+  }
+}
