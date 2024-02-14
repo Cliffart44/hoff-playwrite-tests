@@ -1,0 +1,39 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az1567-897",
+    "children" : [ {
+      "name" : "4746-MainThread",
+      "children" : [ {
+        "name" : "Basket Emptify",
+        "uid" : "8e32db078d691a13",
+        "parentUid" : "d1cc4b460878706b6bfb36037dddfdd4",
+        "status" : "broken",
+        "time" : {
+          "start" : 1707926545708,
+          "stop" : 1707926600698,
+          "duration" : 54990
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'firefox'" ]
+      }, {
+        "name" : "Computer Tables",
+        "uid" : "e87e077f7a2dfd5d",
+        "parentUid" : "d1cc4b460878706b6bfb36037dddfdd4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1707926526686,
+          "stop" : 1707926545359,
+          "duration" : 18673
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'firefox'" ]
+      } ],
+      "uid" : "d1cc4b460878706b6bfb36037dddfdd4"
+    } ],
+    "uid" : "c7d31081a3dbe7771631a0131672dffa"
+  } ],
+  "name" : "timeline"
+}

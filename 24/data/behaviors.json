@@ -1,0 +1,31 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Computer Tables",
+    "uid" : "e87e077f7a2dfd5d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1707926526686,
+      "stop" : 1707926545359,
+      "duration" : 18673
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Basket Emptify",
+    "uid" : "8e32db078d691a13",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1707926545708,
+      "stop" : 1707926600698,
+      "duration" : 54990
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "'firefox'" ]
+  } ],
+  "name" : "behaviors"
+}

@@ -1,0 +1,35 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "test_hoff",
+    "children" : [ {
+      "name" : "Computer Tables",
+      "uid" : "e87e077f7a2dfd5d",
+      "parentUid" : "b35a0bc16cb8bcf8352597ce14fd1ee1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1707926526686,
+        "stop" : 1707926545359,
+        "duration" : 18673
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'firefox'" ]
+    }, {
+      "name" : "Basket Emptify",
+      "uid" : "8e32db078d691a13",
+      "parentUid" : "b35a0bc16cb8bcf8352597ce14fd1ee1",
+      "status" : "broken",
+      "time" : {
+        "start" : 1707926545708,
+        "stop" : 1707926600698,
+        "duration" : 54990
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'firefox'" ]
+    } ],
+    "uid" : "b35a0bc16cb8bcf8352597ce14fd1ee1"
+  } ],
+  "name" : "packages"
+}

@@ -1,0 +1,21 @@
+[ {
+  "uid" : "e87e077f7a2dfd5d",
+  "name" : "Computer Tables",
+  "time" : {
+    "start" : 1707926526686,
+    "stop" : 1707926545359,
+    "duration" : 18673
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "8e32db078d691a13",
+  "name" : "Basket Emptify",
+  "time" : {
+    "start" : 1707926545708,
+    "stop" : 1707926600698,
+    "duration" : 54990
+  },
+  "status" : "broken",
+  "severity" : "minor"
+} ]

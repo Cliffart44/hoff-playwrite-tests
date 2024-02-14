@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Feb 14 16:02:06 GMT 2024","Wed Feb 14 16:02:25 GMT 2024","18673","","test_hoff","","","","Computer Tables","This test attempts to check computer tables page."
+"broken","Wed Feb 14 16:02:25 GMT 2024","Wed Feb 14 16:03:20 GMT 2024","54990","","test_hoff","","","","Basket Emptify","This test attempts to add couple items to the basket and then emptify it."

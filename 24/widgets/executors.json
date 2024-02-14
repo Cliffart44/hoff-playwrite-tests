@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://Cliffart44.github.io/hoff-playwrite-tests",
+  "buildOrder" : 24,
+  "buildName" : "GitHub Actions Run #7903933446",
+  "buildUrl" : "https://github.com/Cliffart44/hoff-playwrite-tests/actions/runs/7903933446",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://Cliffart44.github.io/hoff-playwrite-tests/24"
+} ]
